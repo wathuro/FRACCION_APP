@@ -17,7 +17,7 @@
           <div class="col-12 text-center title">
             <h1 class="display-4">Fracciones</h1>
           </div>
-          <div class="col-12 bg-white">
+          <div class="col-12 bg-gray pb-3">
             <ul class="nav justify-content-center" id="nav">
               <li class="nav-item"> <a class="nav-link">Comparación</a></li>
               <li class="nav-item"> <a class="nav-link">Relaciones</a></li>
@@ -27,12 +27,12 @@
         </div>
         <!-- comparación -->
         <div class="row">
-            <div class="col-12 px-0 mt-3">
+            <div class="col-12 px-0 table-responsive">
                 <table class="table">
                     <thead class="bg-white">
                         <tr>
-                            <th>Fraccion #01</th>
-                            <th>Fraccion #02</th>
+                            <th>Fracción #01</th>
+                            <th>Fracción #02</th>
                             <th></th>
                             <th>{{ comparation }}</th>
                         </tr>
@@ -52,7 +52,7 @@
                             <td>
                                 <button class="btn btn-lg btn-calcular mb-2" @click="calcular">Calcular</button>
                                 <br>
-                                <button class="btn btn-primary btn-sm" @click="clean">Limpiar</button>
+                                <button class="btn btn-danger btn-sm" @click="clean">Limpiar</button>
                             </td>
                             <td>
                                 <input type="text" class="form-control form-control-lg" v-model="numeratorR">
@@ -67,7 +67,7 @@
         <!-- footer -->
         <div class="row">
             <div class="col-12">
-                <p class="text-center">Aula de innovación - Santa Rosa</p>
+                <p class="text-center font-weight-bold">Aula de innovación - Santa Rosa</p>
             </div>
         </div>
       </div>
