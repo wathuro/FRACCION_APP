@@ -12,17 +12,63 @@
   <body>
     <div id="app">
       <div class="container">
+        <!-- header -->
         <div class="row">
-          <div class="col-12 text-center">
+          <div class="col-12 text-center title">
             <h1 class="display-4">Fracciones</h1>
           </div>
-          <div class="col-12">
+          <div class="col-12 bg-white">
             <ul class="nav justify-content-center" id="nav">
               <li class="nav-item"> <a class="nav-link">Comparación</a></li>
               <li class="nav-item"> <a class="nav-link">Relaciones</a></li>
               <li class="nav-item"> <a class="nav-link">Operaciones</a></li>
             </ul>
           </div>
+        </div>
+        <!-- comparación -->
+        <div class="row">
+            <div class="col-12 px-0 mt-3">
+                <table class="table">
+                    <thead class="bg-white">
+                        <tr>
+                            <th>Fraccion #01</th>
+                            <th>Fraccion #02</th>
+                            <th></th>
+                            <th>{{ comparation }}</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control form-control-lg" v-model="numeratorOne" @keyup.delete="changeNumber">
+                                <div class="line"></div>
+                                <input type="text" class="form-control form-control-lg" v-model="denominatorOne" @keyup.delete="changeNumber">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-control-lg" v-model="numeratorTwo" @keyup.delete="changeNumber">
+                                <div class="line"></div>
+                                <input type="text" class="form-control form-control-lg" v-model="denominatorTwo" @keyup.delete="changeNumber">
+                            </td>
+                            <td>
+                                <button class="btn btn-lg btn-calcular mb-2" @click="calcular">Calcular</button>
+                                <br>
+                                <button class="btn btn-primary btn-sm" @click="clean">Limpiar</button>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-control-lg" v-model="numeratorR">
+                                <div class="line"></div>
+                                <input type="text" class="form-control form-control-lg" v-model="denominatorR">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center">Aula de innovación - Santa Rosa</p>
+            </div>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
