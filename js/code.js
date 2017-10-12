@@ -62,10 +62,12 @@ new Vue({
                     else if(fractionMayor == x) {
                         this.numeratorR = nume1;                    
                         this.denominatorR = deno1; 
+                        this.comparation = 'Fracción mayor';
                     }
                     else if(fractionMayor == y) {
                         this.numeratorR = nume2;                    
                         this.denominatorR = deno2;
+                        this.comparation = 'Fracción mayor';
                     }
                 }
                 //fracciones iguales
